@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palanquin:wght@100;200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+body {
+	background-color: rgb(51 65 85);
+}
+
+@layer components {
+	.max-container {
+		/* min-width: 320px; */
+		max-width: 1440px;
+		margin: 0 auto;
+	}
+}
+
+@layer base {
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6,
+	p {
+		@apply my-5;
+	}
+	h1 {
+		@apply text-4xl font-bold text-white;
+	}
+	h2 {
+		@apply text-3xl font-bold text-white;
+	}
+	h3 {
+		@apply text-2xl font-bold text-white;
+	}
+	h4 {
+		@apply text-xl font-bold text-white;
+	}
+	h5 {
+		@apply text-lg font-bold text-white;
+	}
+	h6 {
+		@apply text-base font-bold text-white;
+	}
+	a {
+		@apply text-inherit no-underline border-b-[3px] border-solid border-[#fff3];
+	}
+	a:after {
+		@apply after:content-['_↗'];
+	}
+	a:hover {
+		@apply border-[#fff9];
+	}
+	blockquote {
+		@apply block shadow text-[#666] border-l-[15px] border-r-[2px] border-[#c76c0c] border-solid text-justify bg-white pt-[5px] pb-[5px] pl-[25px] pr-[25px] my-6 relative font-serif text-base;
+	}
+	blockquote::before {
+		@apply left-[10px] top-[5px] font-serif text-6xl font-bold text-[#333];
+	}
+	blockquote a {
+		@apply no-underline bg-[#eee] cursor-pointer py-[0px] px-[3px] text-[#c76c0c];
+	}
+	blockquote a:hover {
+		@apply text-[#666];
+	}
+	blockquote em {
+		@apply italic;
+	}
+	pre {
+		@apply bg-slate-900 p-4 my-6;
+	}
+	code {
+		@apply bg-slate-900 p-1 my-1;
+	}
+	table {
+		@apply p-4 my-6 table-fixed w-full border-collapse border border-solid border-slate-400;
+	}
+	thead th,
+	tfoot th {
+		@apply font-montserrat;
+	}
+	th {
+		@apply bg-slate-600 p-2;
+	}
+	td {
+		@apply text-sm p-1;
+	}
+	tbody td {
+		@apply font-palanquin text-center;
+	}
+	tfoot th {
+		@apply text-left;
+	}
+	tbody tr:nth-child(odd) {
+		@apply bg-slate-700;
+	}
+	tbody tr:nth-child(even) {
+		@apply bg-slate-800;
+	}
+	ul {
+		@apply ml-6 list-disc list-inside;
+	}
+	li {
+		@apply my-2;
+	}
+}
